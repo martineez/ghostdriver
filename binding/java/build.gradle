@@ -32,7 +32,7 @@ apply plugin: "maven"
 apply plugin: "signing"
 
 task wrapper(type: Wrapper) {
-    gradleVersion   = "2.5"
+    gradleVersion   = "2.10"
     jarFile         = "gradle/gradle-wrapper.jar"
 }
 
@@ -55,7 +55,7 @@ ext.projectArtefactDir      = "jars/"
 ext.projectMainClass        = "org.openqa.selenium.phantomjs.PhantomJSDriver"
 ext.projectCreator          = "Ivan De Marino (https://github.com/detro)"
 
-ext.seleniumVersion         = "2.44.0"
+ext.seleniumVersion         = "2.50.0"
 
 dependencies {
     ["selenium-java", "selenium-remote-driver"].each {
@@ -142,7 +142,7 @@ artifacts {
 
 // Sign artifacts
 signing {
-    sign configurations.archives
+    // sign configurations.archives
 }
 
 // Upload archives to OSS Sonatype
